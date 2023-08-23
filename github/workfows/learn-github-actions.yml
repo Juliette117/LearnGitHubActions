@@ -1,0 +1,9 @@
+name: learn-github-actions
+on: [push]
+jobs:
+  hello-world:
+  runs-on: unbuntu-latest
+steps:
+  -uses: actions/checkout@v3
+  -mane: Hello World !
+  -run: echo Hello, World !
