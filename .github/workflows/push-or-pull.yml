@@ -1,0 +1,23 @@
+name: Push or Pull ?
+#triggers
+on: [push, pull_request]
+env:
+  PUSH: Push
+  PR: Pull Request
+
+jobs: 
+  push:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Push
+        run: echo "C'est un $PUSH !" 
+
+  pull:
+    runs-on: ubuntu-latest
+    #On vérifie que c'est bien une PR
+    if: ${{github.event_name == 'pull_request'}}
+    steps:
+      - uses: actions/checkout@v3
+      - name: Pull Request
+        run: echo "C'est une $PR" !

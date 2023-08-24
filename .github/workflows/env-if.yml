@@ -8,6 +8,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: "Dit Bonjour"
+      #Si on utilise une variable d'env, elle ne peut être utilisé que dans un step
+      #Le runner n'y a pas accès
         if: ${{env.NAME != 'Juliette'}}
         run: echo "Salut ! Tu n'est pas celle que j'attendais."
 
