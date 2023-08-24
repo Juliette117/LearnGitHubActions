@@ -1,0 +1,24 @@
+name: Amnesia
+on: [workflow_dispatch]
+env:
+  NAME: Juliette
+jobs: 
+  say_hello:
+    runs-on: ubuntu-latest
+    env:
+      AGE: 31
+    steps: 
+      -name: "Dis Bonjour"
+       run: echo Salut $NAME, j'ai $AGE ans et on est $DAY.
+       env:
+        DAY: Jeudi
+
+      -name: "Jeudi ?"
+       run: echo Quel jour sommes-nous ? --> C'est $DAY !
+
+  say_goodbye:
+    runs-on: ubuntu-latest
+    steps:
+      -name: "Dit Au revoir"
+        run: echo Au revoir $NAME !
+        
