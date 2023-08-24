@@ -9,7 +9,7 @@ jobs:
       AGE: 31
     steps: 
       -name: "Dis Bonjour"
-       run: echo Salut $NAME, j'ai $AGE ans et on est $DAY.
+       run: echo "Salut $NAME, j'ai $AGE ans et on est $DAY".
        env:
         DAY: Jeudi
 
