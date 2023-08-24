@@ -6,15 +6,15 @@ jobs:
   say_hello:
     runs-on: ubuntu-latest
     env:
-      AGE: 31
+      ETREPRISE: JCORP
     steps: 
       -name: "Dis Bonjour"
-       run: echo "Salut $NAME, j'ai $AGE ans et on est $DAY".
+       run: echo Salut $NAME, je travaille pour la $ENTREPRISE et on est $DAY.
        env:
         DAY: Jeudi
 
       -name: "Jeudi ?"
-       run: echo Quel jour sommes-nous ? --> C'est $DAY !
+       run: echo Quel jour sommes-nous ? -->  $DAY !
 
   say_goodbye:
     runs-on: ubuntu-latest
