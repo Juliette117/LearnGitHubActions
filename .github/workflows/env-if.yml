@@ -7,10 +7,10 @@ jobs:
   say_Hello:
     runs-on: ubuntu-latest
     steps:
-      -name:"Dit Bonjour"
+      - name: "Dit Bonjour"
         if: ${{env.NAME != 'Juliette'}}
         run: echo "Salut ! Tu n'est pas celle que j'attendais."
 
-      -name "Hello"
+      - name: "Hello"
         if: ${{env.NAME == 'Juliette' }}
         run: echo Salut $NAME !
