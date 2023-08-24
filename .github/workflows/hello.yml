@@ -1,9 +1,9 @@
-name: learn-github-actions
+name: Hello-World
 on: [push]
 jobs:
   hello-world:
-  runs-on: ubuntu-latest
-steps:
-  -uses: actions/checkout@v3
-  -mane: Hello World !
-  -run: echo Hello, World !
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Hello World !
+        run: echo Hello, Wordl !
