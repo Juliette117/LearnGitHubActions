@@ -14,7 +14,7 @@ jobs:
           DAY: Jeudi
 
       - name: "Jeudi ?"
-        run: echo Quel jour sommes-nous ? -->  $DAY !
+        run: echo "Quel jour sommes-nous ? -->  $DAY !"
 
   say_goodbye:
     runs-on: ubuntu-latest
