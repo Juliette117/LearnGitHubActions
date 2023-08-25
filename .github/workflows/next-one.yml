@@ -1,0 +1,4 @@
+name: Next One
+on: workflow_run
+  workflows: ["hello"]
+  types: [completed]

@@ -1,0 +1,16 @@
+name: matrix
+on: workflow_dispatch
+jobs:
+  listes:
+    strategy:
+      fail-fast: true
+      matrix:
+        fruits: [pomme, pêche, poire, banane]
+        noms: [Pierre, Paul, Jack]
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Manger
+        run: echo "${{matrix.noms}} mange une {{matrix.fruits}} ."
+  
+  
