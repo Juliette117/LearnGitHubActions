@@ -1,0 +1,17 @@
+# Nom du workflow
+name: Hello-World 2
+# Déclencheur du workflow
+on: workflow_dispatch
+# Actions à réaliser lors du déclenchement de ce worflow
+jobs:
+  # Définition de la première action
+  first-job:
+  # Précision du système d'exploitation
+    runs-on: ubuntu-latest
+    # Etapes de l'action
+    steps:
+      # - uses: actions/checkout@v3
+      - name: Dit bonjour
+        run: echo Hello !
+      - name: Dit au revoir
+        run: echo Goodbye !

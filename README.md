@@ -1,3 +1,3 @@
 # LearnGitHubActions
 
-Tests Github Action
+Tests Github Actions
