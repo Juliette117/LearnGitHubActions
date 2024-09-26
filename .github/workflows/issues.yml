@@ -1,7 +1,28 @@
 name: issues
 on:
-issues:
-  types: Push
-    - opened
+  issues:
+    types: opened
 
+jobs:
+  variables:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Mes variables d'environnement
+        env:
+          MA_VARABLE: ${{ vars.MA_VARIABLE }}
+          MON_SECRET: ${{ secrets.MON_SECRET }}
+        run: |
+          echo "Le secret est : $MON_SECRET"
+          echo "Ma variable est : $MA_VARIABLE"
+        # Variable et secret déclarés dans Github
+  commentaire:
+    runs-on: ubuntu-latest
+    permissions: 
+      issues: write
+    steps:
+      - name: Réponse à une issue
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ISSUE_URL: ${{ github.event.issue.html_url }}
+        run: gh issue comment $ISSUE_URL --body "Merci d'avoir ouvert cette issue"
     
